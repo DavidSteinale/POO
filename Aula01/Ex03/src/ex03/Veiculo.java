@@ -1,14 +1,16 @@
 package ex03;
 
+import java.math.BigDecimal;
 
-public class Veiculo {
+
+public class Veiculo{
 
     private String modelo;
     private String marca;
     private String cor;
     private int ano;
     private int velMaxima;
-    private double valorFipe;
+    private BigDecimal valorFipe;
 
     public String detalhe() {
         return "Veiculo{" + "modelo=" + this.modelo
@@ -71,7 +73,7 @@ public class Veiculo {
         this.velMaxima = velMaxima;
     }
 
-    public double getValorFipe() {
+    public BigDecimal getValorFipe() {
         return valorFipe;
     }
 
