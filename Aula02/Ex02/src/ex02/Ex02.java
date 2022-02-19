@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 public class Ex02 {
 
     public static void main(String[] args) {
-
         Fornecedor fornecedor = new Fornecedor("FENSA", "(41) 36535896", BigDecimal.valueOf(10000));
 
         fornecedor.setEndereco("Av das Torres, 85");
