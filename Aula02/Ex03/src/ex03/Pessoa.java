@@ -1,6 +1,8 @@
 package ex03;
+
 public class Pessoa {
-      private String nome;
+
+    private String nome;
     private String endereço;
     private String telefone;
 

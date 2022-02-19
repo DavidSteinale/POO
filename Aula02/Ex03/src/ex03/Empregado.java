@@ -3,7 +3,7 @@ package ex03;
 import java.math.BigDecimal;
 
 public class Empregado extends Pessoa {
-
+    
     private int codigoSetor;
     private BigDecimal salarioBase;
     private BigDecimal imposto;
@@ -27,25 +27,25 @@ public class Empregado extends Pessoa {
     public int getCodigoSetor() {
         return codigoSetor;
     }
-
+    
     public void setCodigoSetor(int codigoSetor) {
         this.codigoSetor = codigoSetor;
     }
-
+    
     public BigDecimal getSalarioBase() {
         return salarioBase;
     }
-
+    
     public void setSalarioBase(BigDecimal salarioBase) {
         this.salarioBase = salarioBase;
     }
-
+    
     public BigDecimal getImposto() {
         return imposto;
     }
-
+    
     public void setImposto(BigDecimal imposto) {
         this.imposto = imposto.divide(BigDecimal.valueOf(100));
     }
-
+    
 }
