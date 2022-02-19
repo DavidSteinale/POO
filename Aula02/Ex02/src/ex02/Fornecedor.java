@@ -20,10 +20,6 @@ public class Fornecedor extends Pessoa {
         return valorCredito;
     }
 
-   /* public void setValorCredito(BigDecimal valorCredito) {
-        this.valorCredito = valorCredito;
-    }*/
-
     public BigDecimal getValorDivida() {
         return valorDivida;
     }
