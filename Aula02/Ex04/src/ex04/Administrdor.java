@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ex04;
 
-/**
- *
- * @author Stein
- */
-public class Administrdor {
+import java.math.BigDecimal;
+
+public class Administrdor extends Empregado{
     
+    private BigDecimal ajudaDeCusto;
+    
+    public Administrdor(String nome, String telefone) {
+        super(nome, telefone);
+    }
+    
+
 }
