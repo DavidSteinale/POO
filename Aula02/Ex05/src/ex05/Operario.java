@@ -14,10 +14,8 @@ public class Operario extends Empregado {
     @Override
     public void calcularSalario() {
         BigDecimal comissaoPercentual = this.getComissao().divide(BigDecimal.valueOf(100));
-        
-        BigDecimal comissaoValor = this.getValorProducao().multiply(comissaoPercentual);
-        BigDecimal valor = this.getSalarioBase().add(comissaoValor);
-       
+        BigDecimal comissaoValor = this.getValorProducao().multiply(comissaoPercentual);// CALCULA O VALOR QUE SERÁ PAGO NA COMISSÃO
+        BigDecimal valor = this.getSalarioBase().add(comissaoValor); // SOMA O VALOR DA COMISSÃO COM O SALARIO BASE
 
         System.out.println("-------------------------");
         System.out.println();
