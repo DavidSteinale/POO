@@ -9,7 +9,7 @@ public class Ex04 {
         Scanner scanner = new Scanner(System.in);
 
         Administrdor adm = new Administrdor("Pedro Henrique", "(416325633)");
-
+        
         System.out.print("Informe o salario base? ");
         adm.setSalarioBase(BigDecimal.valueOf(scanner.nextDouble()));
 
