@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public class Empregado extends Pessoa {
 
-    private int codigoSetor;
-    private BigDecimal salarioBase;
-    private BigDecimal imposto;
+    protected int codigoSetor;
+    protected BigDecimal salarioBase;
+    protected BigDecimal imposto;
 
     //CONSTRUTOR HERDADO DA CLASSE PESSOA E COM SEU ATRIBUTOS PARTICULARES
     public Empregado(String nome, String endereco, String telefone, int codigoSetor, BigDecimal salarioBase, BigDecimal imposto) {
@@ -14,6 +14,16 @@ public class Empregado extends Pessoa {
         this.setCodigoSetor(codigoSetor);
         this.setSalarioBase(salarioBase);
         this.setImposto(imposto);
+    }
+
+    public String toString() {
+        return "Empregado {" + "nome=" + nome
+                + ", endereco=" + endereco
+                + ", telefone=" + telefone
+                + ", Codigo do Setor=" + codigoSetor
+                + ", Salario Base=" + salarioBase
+                + ", Imposto=" + imposto
+                + '}';
     }
 
     //METODO

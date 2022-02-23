@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Administrdor extends Empregado {
 
-    private BigDecimal ajudaDeCusto;
+    protected BigDecimal ajudaDeCusto;
 
     //CONSTRUTOR HERDADO DA CLASSE PESSOA E COM SEU ATRIBUTOS PARTICULARES
     public Administrdor(String nome, String endereco, String telefone, int codigoSetor, BigDecimal salarioBase,
@@ -13,8 +13,18 @@ public class Administrdor extends Empregado {
         super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
         this.setAjudaDeCusto(ajudaDeCusto);
     }
+    
+    public String toString() {
+        return "Administrador {" + "nome=" + nome
+                + ", endereco=" + endereco
+                + ", telefone=" + telefone
+                + ", Codigo do Setor=" + codigoSetor
+                + ", Salario Base=" + salarioBase
+                + ", Imposto=" + imposto
+                + ", Ajuda de custo=" + ajudaDeCusto
+                +'}';
+    }
 
-    @Override
     public void calcularSalario() {
         System.out.println();
         System.out.printf("Nome do Administrador: %s \n", this.getNome());

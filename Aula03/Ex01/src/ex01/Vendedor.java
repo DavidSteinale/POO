@@ -16,6 +16,18 @@ public class Vendedor extends Empregado {
         this.setComissao(comissao);
 
     }
+    
+    public String toString() {
+        return "Operario {" + "nome=" + nome
+                + ", endereco=" + endereco
+                + ", telefone=" + telefone
+                + ", Codigo do Setor=" + codigoSetor
+                + ", Salario Base=" + salarioBase
+                + ", Imposto=" + imposto
+                + ", Valor das vendas=" + valorVendas
+                + ", Comissão=" + comissao
+                + '}';
+    }
 
     @Override
     public void calcularSalario() {

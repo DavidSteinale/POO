@@ -5,15 +5,27 @@ import java.math.BigDecimal;
 public class Operario extends Empregado {
 
     private BigDecimal valorProducao;
-    private BigDecimal comissão;
+    private BigDecimal comissao;
 
     //CONSTRUTOR HERDADO DA CLASSE EMPREGADO E COM SEU ATRIBUTOS PARTICULARES
     public Operario(String nome, String endereco, String telefone, int codigoSetor, BigDecimal salarioBase,
-            BigDecimal imposto, BigDecimal valorProducao, BigDecimal comissão) {
+            BigDecimal imposto, BigDecimal valorProducao, BigDecimal comissao) {
 
         super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
         this.setValorProducao(valorProducao);
-        this.setComissao(comissão);
+        this.setComissao(comissao);
+    }
+
+    public String toString() {
+        return "Operario {" + "nome=" + nome
+                + ", endereco=" + endereco
+                + ", telefone=" + telefone
+                + ", Codigo do Setor=" + codigoSetor
+                + ", Salario Base=" + salarioBase
+                + ", Imposto=" + imposto
+                + ", Valor da produção=" + valorProducao
+                + ", Comissão=" + comissao
+                + '}';
     }
 
     @Override
@@ -42,11 +54,11 @@ public class Operario extends Empregado {
     }
 
     public BigDecimal getComissao() {
-        return comissão;
+        return comissao;
     }
 
-    public void setComissao(BigDecimal comissão) {
-        this.comissão = comissão;
+    public void setComissao(BigDecimal comissao) {
+        this.comissao = comissao;
     }
 
 }

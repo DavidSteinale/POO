@@ -2,9 +2,9 @@ package ex01;
 
 public class Pessoa {
 
-    private String nome;
-    private String endereco;
-    private String telefone;
+    protected String nome;
+    protected String endereco;
+    protected String telefone;
 
     public Pessoa() {
     }
@@ -14,6 +14,15 @@ public class Pessoa {
         this.endereco = endereco;
         this.telefone = telefone;
     }
+
+    
+    public String toString() {
+        return "Pessoa {" + "nome=" + nome +
+                ", endereco=" + endereco + 
+                ", telefone=" + telefone +
+                '}';
+    }
+       
 
     public String getNome() {
         return nome;
