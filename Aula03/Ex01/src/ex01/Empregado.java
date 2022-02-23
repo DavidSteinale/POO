@@ -16,14 +16,12 @@ public class Empregado extends Pessoa {
         this.setImposto(imposto);
     }
 
+    @Override
     public String toString() {
-        return "Empregado {" + "nome=" + nome
-                + ", endereco=" + endereco
-                + ", telefone=" + telefone
-                + ", Codigo do Setor=" + codigoSetor
-                + ", Salario Base=" + salarioBase
-                + ", Imposto=" + imposto
-                + '}';
+        return "Pessoa {" + "nome=" + nome +
+                ", endereco=" + endereco + 
+                ", telefone=" + telefone +
+                '}';
     }
 
     //METODO

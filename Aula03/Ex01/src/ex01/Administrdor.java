@@ -14,15 +14,12 @@ public class Administrdor extends Empregado {
         this.setAjudaDeCusto(ajudaDeCusto);
     }
     
-    public String toString() {
-        return "Administrador {" + "nome=" + nome
-                + ", endereco=" + endereco
-                + ", telefone=" + telefone
-                + ", Codigo do Setor=" + codigoSetor
-                + ", Salario Base=" + salarioBase
-                + ", Imposto=" + imposto
-                + ", Ajuda de custo=" + ajudaDeCusto
-                +'}';
+    @Override
+   public String toString() {
+        return "Pessoa {" + "nome=" + nome +
+                ", endereco=" + endereco + 
+                ", telefone=" + telefone +
+                '}';
     }
 
     public void calcularSalario() {

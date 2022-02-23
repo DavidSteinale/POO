@@ -16,16 +16,11 @@ public class Operario extends Empregado {
         this.setComissao(comissao);
     }
 
-    public String toString() {
-        return "Operario {" + "nome=" + nome
-                + ", endereco=" + endereco
-                + ", telefone=" + telefone
-                + ", Codigo do Setor=" + codigoSetor
-                + ", Salario Base=" + salarioBase
-                + ", Imposto=" + imposto
-                + ", Valor da produção=" + valorProducao
-                + ", Comissão=" + comissao
-                + '}';
+   public String toString() {
+        return "Pessoa {" + "nome=" + nome +
+                ", endereco=" + endereco + 
+                ", telefone=" + telefone +
+                '}';
     }
 
     @Override

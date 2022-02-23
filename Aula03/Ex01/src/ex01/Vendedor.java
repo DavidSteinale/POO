@@ -17,16 +17,12 @@ public class Vendedor extends Empregado {
 
     }
     
+    @Override
     public String toString() {
-        return "Operario {" + "nome=" + nome
-                + ", endereco=" + endereco
-                + ", telefone=" + telefone
-                + ", Codigo do Setor=" + codigoSetor
-                + ", Salario Base=" + salarioBase
-                + ", Imposto=" + imposto
-                + ", Valor das vendas=" + valorVendas
-                + ", Comissão=" + comissao
-                + '}';
+        return "Pessoa {" + "nome=" + nome +
+                ", endereco=" + endereco + 
+                ", telefone=" + telefone +
+                '}';
     }
 
     @Override
