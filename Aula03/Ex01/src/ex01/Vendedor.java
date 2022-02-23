@@ -7,10 +7,16 @@ public class Vendedor extends Empregado {
     private BigDecimal valorVendas;
     private BigDecimal comissao;
 
-    public Vendedor(String nome, String endereco, String telefone) {
-        super(nome, endereco, telefone);
+    //CONSTRUTOR HERDADO DA CLASSE PESSOA E COM SEU ATRIBUTOS PARTICULARES
+    public Vendedor(String nome, String endereco, String telefone, int codigoSetor, BigDecimal salarioBase,
+            BigDecimal imposto, BigDecimal valorVendas, BigDecimal comissao) {
+
+        super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
+        this.setValorVendas(valorVendas);
+        this.setComissao(comissao);
+
     }
-    
+
     @Override
     public void calcularSalario() {
         BigDecimal comissaoPercentual = this.getComissao().divide(BigDecimal.valueOf(100));
@@ -43,11 +49,5 @@ public class Vendedor extends Empregado {
     public void setComissao(BigDecimal comissao) {
         this.comissao = comissao;
     }
-    
-    
-    
-    
-    
-    
 
 }

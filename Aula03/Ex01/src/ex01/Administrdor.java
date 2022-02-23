@@ -6,8 +6,12 @@ public class Administrdor extends Empregado {
 
     private BigDecimal ajudaDeCusto;
 
-    public Administrdor(String nome, String endereco, String telefone) {
-        super(nome, endereco, telefone);
+    //CONSTRUTOR HERDADO DA CLASSE PESSOA E COM SEU ATRIBUTOS PARTICULARES
+    public Administrdor(String nome, String endereco, String telefone, int codigoSetor, BigDecimal salarioBase,
+            BigDecimal imposto, BigDecimal ajudaDeCusto) {
+
+        super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
+        this.setAjudaDeCusto(ajudaDeCusto);
     }
 
     @Override

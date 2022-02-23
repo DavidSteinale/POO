@@ -7,8 +7,13 @@ public class Operario extends Empregado {
     private BigDecimal valorProducao;
     private BigDecimal comissão;
 
-    public Operario(String nome, String endereco, String telefone) {
-        super(nome, endereco, telefone);
+    //CONSTRUTOR HERDADO DA CLASSE EMPREGADO E COM SEU ATRIBUTOS PARTICULARES
+    public Operario(String nome, String endereco, String telefone, int codigoSetor, BigDecimal salarioBase,
+            BigDecimal imposto, BigDecimal valorProducao, BigDecimal comissão) {
+
+        super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
+        this.setValorProducao(valorProducao);
+        this.setComissao(comissão);
     }
 
     @Override
