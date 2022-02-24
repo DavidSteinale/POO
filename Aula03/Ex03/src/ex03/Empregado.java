@@ -1,8 +1,11 @@
 package ex03;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 
 public class Empregado extends Pessoa {
+    
+    MathContext m = new MathContext(4);
 
     protected int codigoSetor;
     protected BigDecimal salarioBase;
@@ -57,7 +60,7 @@ public class Empregado extends Pessoa {
                 System.out.printf("Salário Líquido %.2f \n", salarioLiquido);
                 System.out.printf("Valor do imposto pago: %.2f \n", valorImposto);
                 System.out.printf("Salário somando %.2f%% de comissão: %.2f \n",
-                        COMISSAO1, salario); // FALTA AJUSTAR NO ARREDONDAMENTO NO SALARIO
+                        COMISSAO1, salario.round(m)); // FALTA AJUSTAR NO ARREDONDAMENTO NO SALARIO
 
                 break;
             case 2:
