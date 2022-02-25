@@ -10,7 +10,7 @@ public class Empregado extends Pessoa {
     protected BigDecimal salarioBase;
     protected BigDecimal imposto;
 
-    TipoJornadaEmpregado turno = TipoJornadaEmpregado.MEIO_PERIODO;
+    private TipoJornadaEmpregado turno;  //DECLARANDO UMA VARIAVEL QUE IRA RECEBER O VALOR DO ENUM
 
     // CONSTANTES
     private final BigDecimal COMISSAO1 = BigDecimal.valueOf(5);
