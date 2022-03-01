@@ -21,8 +21,7 @@ public class Principal {
 
         int op = -1;
         int op2;
-        
-        
+
         do {
             System.out.println("---MENU---");
             System.out.println(" 1 - Compra");
@@ -71,26 +70,28 @@ public class Principal {
                         case 2:
                             moto[0].venda();
                             break;
-                case 4:
-                    System.out.println("---MANUTENÇÃO---");
-                    System.out.println(" 1 - Carro");
-                    System.out.println(" 2 - Moto");
-                    op2 = scanner.nextInt();
-                    switch (op2) {
-                        case 1:
-                            System.out.print("Informe o tipo de combutivel:");
-                            String tipoComb = scanner.next();
-                            
-                            carro[0].orcamento(tipoComb);
-                            break;
-                        case 2:
-                            System.out.print("Informe o km:");
-                            float km = scanner.nextFloat();
-                            moto[0].orcamento(km);
-                            break;
+                        case 4:
+                            System.out.println("---MANUTENÇÃO---");
+                            System.out.println(" 1 - Carro");
+                            System.out.println(" 2 - Moto");
+                            op2 = scanner.nextInt();
+                            switch (op2) {
+                                case 1:
+                                    System.out.print("Informe o tipo de combutivel:");
+                                    String tipoComb = scanner.next();
+
+                                    carro[0].orcamento(tipoComb);
+                                    break;
+                                case 2:
+                                    System.out.print("Informe o km:");
+                                    float km = scanner.nextFloat();
+                                    moto[0].orcamento(km);
+                                    break;
+                            }
                     }
-                    
+                    }
             }
-        } while (op != 0);
+            while (op != 0);
+        }
+
     }
-}
