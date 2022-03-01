@@ -3,11 +3,16 @@ package principal;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Carro extends Veiculo  implements IProcessos {
+public class Carro extends Veiculo implements IProcessos {
+
     Scanner scanner = new Scanner(System.in);
 
     private int qtdPortas;
     private boolean indicadorArbag;
+
+    private final float VALOR_ALCOOL = 250f;
+    private final float VALOR_GASOLINA = 500f;
+    private final float VALOR_FLEX = 625f;
 
     //CONSTRUTOR
     public Carro() {
@@ -71,12 +76,22 @@ public class Carro extends Veiculo  implements IProcessos {
 
     @Override
     public void venda() {
-        this.toString();
+        System.out.println("Veiculo vendido com sucesso!!!");
     }
 
-    @Override
-    public void orcamento() {
-        
+    public void orcamento(String tipoCombustivel) {
+        System.out.println("**********************************************");
+        if (tipoCombustivel.equals("alcool")) {
+            System.out.printf("Valor da manutenção: %.2f \n", VALOR_ALCOOL);
+        }
+        if (tipoCombustivel.equals("gasolina")) {
+            System.out.printf("Valor da manutenção: %.2f \n", VALOR_GASOLINA);
+        }
+        if (tipoCombustivel.equals("flex")) {
+            System.out.printf("Valor da manutenção: %.2f \n", VALOR_FLEX);
+        }
+        System.out.println("**********************************************");
+
     }
 
 }

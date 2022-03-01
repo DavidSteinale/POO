@@ -22,7 +22,9 @@ public abstract class Veiculo {
         this.tipoCombutivel = tipoCombutivel;
         this.preco = preco;
     }
-
+    
+    public void orcamento(){     
+    }
     
     //METODOS MODIFICADORES
     
