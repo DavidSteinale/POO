@@ -59,8 +59,20 @@ public class Principal {
                         System.out.println(moto[y].toString());
                     }
                     break;
+                case 3:
+                    System.out.println("---VENDAS---");
+                    System.out.println(" 1 - Carro");
+                    System.out.println(" 2 - Moto");
+                    op2 = scanner.nextInt();
+                    switch (op2) {
+                        case 1:
+                            carro[0].venda();
+                            break;
+                        case 2:
+                            moto[0].venda();
+                            break;
                 case 4:
-                     System.out.println("---MANUTENÇÃO---");
+                    System.out.println("---MANUTENÇÃO---");
                     System.out.println(" 1 - Carro");
                     System.out.println(" 2 - Moto");
                     op2 = scanner.nextInt();
