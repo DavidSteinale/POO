@@ -27,6 +27,7 @@ public class FornecedorDAO {
 
             pstm.execute(); // EXECUTA O PROCEDIMENTO
             pstm.close(); // FECHA O ACESSO AO BANCO
+            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso.");
 
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, "FornecedorDAO" + erro);
