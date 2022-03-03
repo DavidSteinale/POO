@@ -5,8 +5,8 @@ package DTO;
 
 public class FornecedorDTO {
 
-    private String razaoSocial;
-    private String endereco;
+    private String razaoSocial, endereco;
+    private int id_fornecedor;
 
     public String getRazaoSocial() {
         return razaoSocial;
@@ -23,5 +23,14 @@ public class FornecedorDTO {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+    public int getId_fornecedor() {
+        return id_fornecedor;
+    }
+
+    public void setId_fornecedor(int id_fornecedor) {
+        this.id_fornecedor = id_fornecedor;
+    }
+    
    
 }
