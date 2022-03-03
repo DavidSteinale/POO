@@ -3,12 +3,12 @@ package ex03;
 
 
 public class CriadorLampadaIncandescente {
-    public static void main(String[] args) {
+    
+    public void criar(){
         LampadaIncandescente incandescente = new LampadaIncandescente();
         
         incandescente.liga();
-        
-        
     }
+    
     
 }

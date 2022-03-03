@@ -2,7 +2,7 @@ package ex03;
 
 public class CriadorLampadaFluorescente {
 
-    public static void main(String[] args) {
+    public void criar() {
         LampadaFluorescente fluorescente = new LampadaFluorescente();
 
         fluorescente.liga();

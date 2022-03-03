@@ -60,8 +60,6 @@ public class frmFornecedor extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("Razão Social:");
 
-        txtRazaoSocial.setRequestFocusEnabled(false);
-
         btnCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +84,7 @@ public class frmFornecedor extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tbFornecedor);
 
-        jLabel4.setText("_______________________________________________________________________________________________");
+        jLabel4.setText("___________________________________________________________________________________________________________________________");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setText("Listar Fornecedores");
@@ -106,20 +104,6 @@ public class frmFornecedor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(42, 42, 42))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(75, 75, 75)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtRazaoSocial)
-                            .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
-                        .addComponent(btnCadastrar)
-                        .addGap(23, 23, 23))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,11 +112,24 @@ public class frmFornecedor extends javax.swing.JFrame {
                                 .addGap(147, 147, 147))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnListar)
-                                .addGap(300, 300, 300))))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(300, 300, 300))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(42, 42, 42))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(75, 75, 75)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtEndereco, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                                    .addComponent(txtRazaoSocial))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                                .addComponent(btnCadastrar)))
+                        .addGap(23, 23, 23))))
             .addComponent(jScrollPane1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -184,6 +181,7 @@ public class frmFornecedor extends javax.swing.JFrame {
         FornecedorDAO objfornecedordao = new FornecedorDAO();// CRIA OUTRO OBJETO D CLASSE FornecedorDAO, ONDE RECEBE O OBJETO objfornecedordto
         objfornecedordao.inserir(objfornecedordto);// ENVIA OS VALORES PARA O METODO INSERIR NA CLASSE FornecedorDAO
 
+        limpaCampo();
 
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
@@ -267,5 +265,9 @@ public class frmFornecedor extends javax.swing.JFrame {
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, " Frmfornecedor Listar fornecedor" + erro);
         }
+    }
+    private void limpaCampo(){
+        txtRazaoSocial.setText("");
+        txtEndereco.setText("");     
     }
 }
