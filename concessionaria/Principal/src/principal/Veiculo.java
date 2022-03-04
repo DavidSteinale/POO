@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 public abstract class Veiculo {
 
+    // ****mudar para protected****
     private String fabricante;
     private String modelo;
     private String ano;

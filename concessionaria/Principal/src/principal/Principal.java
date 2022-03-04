@@ -1,4 +1,7 @@
 package principal;
+/**
+ * criar um enum para combustiveis
+ */
 
 import java.math.BigDecimal;
 import java.util.Scanner;
