@@ -6,6 +6,16 @@ public class Cardapio {
 
     String[] cardapio = new String[9];
     private CardapioEnum cardapioEnum;
+    
+    final double VALOR_BURGUER = 30f;
+    final double VALOR_PIZZA = 45f;
+    final double VALOR_FOGAZZA = 20f;
+    final double VALOR_REFRIGERANTE = 5f;
+    final double VALOR_SUCO = 7f;
+    final double VALOR_VINHO = 50f;
+    final double VALOR_PASTA = 30f;
+    final double VALOR_LASANHA = 70f;
+    final double VALOR_POLPETONE = 50f;
 
     public void cardapio() {
         String[] cardapio = {CardapioEnum.BURGUER.getDescricao() + "  - R$ 30,00",

@@ -1,7 +1,7 @@
 package ENUM;
 
 public enum CardapioEnum {
-    
+
     LANCHES("Lanches"),
     COMIDA("Comida"),
     BEBIDAS("Bebidas"),
@@ -14,7 +14,6 @@ public enum CardapioEnum {
     REFRIGERANTE("Refrigerante"),
     SUCO("Suco"),
     VINHO("Vinho");
-    
 
     private String descricao;
 
