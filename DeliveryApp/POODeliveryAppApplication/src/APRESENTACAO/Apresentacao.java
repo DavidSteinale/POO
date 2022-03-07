@@ -16,30 +16,28 @@ public class Apresentacao {
         int menu = -1;
 
         while (menu != 0) {
-            try {
-                System.out.println("+-------------------------------------------+");
-                System.out.println("|  SEJA BEM VINDO À CANTINA CODIFICHIAMO    |");
-                System.out.println("+-------------------------------------------+");
-                System.out.println("| 1 - Consultar Cardápio.                   |");
-                System.out.println("| 2 - Realizar um pedido.                   |");
-                System.out.println("| 0 - Sair                                  |");
-                System.out.println("+-------------------------------------------+");
-                System.out.println("");
 
-                System.out.print("Digite uma das opções, por favor:");
-                menu = scanner.nextInt();
-                switch (menu) {
-                    case 1:
-                        cardapio.cardapio();
-                        break;
-                    case 2:
-                        pedido.addPedido();
-                        break;
+            System.out.println("+-------------------------------------------+");
+            System.out.println("|  SEJA BEM VINDO À CANTINA CODIFICHIAMO    |");
+            System.out.println("+-------------------------------------------+");
+            System.out.println("| 1 - Consultar Cardápio.                   |");
+            System.out.println("| 2 - Realizar um pedido.                   |");
+            System.out.println("| 0 - Sair                                  |");
+            System.out.println("+-------------------------------------------+");
+            System.out.println("");
 
-                }
-            } catch (Exception erro) {
-                System.out.println("Opção invalida, digite uma opção valida." + erro);
+            System.out.print("Digite uma das opções, por favor:");
+            menu = scanner.nextInt();
+            switch (menu) {
+                case 1:
+                    cardapio.cardapio();
+                    break;
+                case 2:
+                    pedido.addPedido();
+                    break;
+
             }
+
         }
 
     }

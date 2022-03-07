@@ -19,12 +19,10 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
     private String op, nomePrato;
     private double valor, taxa;
     private int qtdPrato;
-    private int numeroPedido= random.nextInt(1000);
+    private int numeroPedido = random.nextInt(1000);
 
-    
     private CardapioEnum teste;
-            
-            
+
     public void addPedido() {
 
         do {
@@ -33,10 +31,10 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                 System.out.print("Informe o nome do prato:");
                 this.nomePrato = scanner.nextLine();
                 // this.nomePrato = scanner.nextLine().toUpperCase();
-            } catch (Exception erro) {
-                System.out.println("Prato inexitente");
+            } catch (Exception e) {
+                System.out.println("prato invalidao" + e);
             }
-            System.out.println("maiuscula" + this.nomePrato);
+
             System.out.print("Informe que quantidade:");
             this.qtdPrato = scanner.nextInt();
             scanner.nextLine();
@@ -135,7 +133,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
         System.out.printf("         Taxa de entrega...: %.2f \n", taxa);
         System.out.printf("         Valor total.......: %.2f \n", (valor + taxa));
         System.out.println("+-------------------------------------------+");
-        System.out.printf("             NÚMERO DO PEDIDO: %s \n \n",numeroPedido);
+        System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", numeroPedido);
         System.out.println("    Obrigado Pelo Pedido - Conte Conosco!");
         System.out.println();
         System.out.println("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
