@@ -14,7 +14,7 @@ public class Apresentacao {
         Scanner scanner = new Scanner(System.in);
         int menu = -1;
 
-        while (menu != 0) {
+        do {
 
             System.out.println("+-------------------------------------------+");
             System.out.println("|  SEJA BEM VINDO À CANTINA CODIFICHIAMO    |");
@@ -37,7 +37,7 @@ public class Apresentacao {
 
             }
 
-        }
+        } while (menu != 0);
 
     }
 }
