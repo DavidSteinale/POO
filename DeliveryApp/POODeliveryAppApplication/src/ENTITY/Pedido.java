@@ -61,49 +61,49 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
                     valorUnidDePedido.add(VALOR_PASTA);
-                    taxaEntrega(1f);
+                    taxaEntrega(2f);
                     break;
                 case "Lasanha":
                     cestaDePedido.add(Double.valueOf(VALOR_LASANHA * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
                     valorUnidDePedido.add(VALOR_LASANHA);
-                    taxaEntrega(1f);
+                    taxaEntrega(2f);
                     break;
                 case "Polpetone":
                     cestaDePedido.add(Double.valueOf(VALOR_POLPETONE * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
                     valorUnidDePedido.add(VALOR_POLPETONE);
-                    taxaEntrega(1f);
+                    taxaEntrega(2f);
                     break;
                 case "Refrigerante":
                     cestaDePedido.add(Double.valueOf(VALOR_REFRIGERANTE * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
                     valorUnidDePedido.add(VALOR_REFRIGERANTE);
-                    taxaEntrega(2f);
+                    taxaEntrega(1f);
                     break;
                 case "Suco":
                     cestaDePedido.add(Double.valueOf(VALOR_SUCO * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
                     valorUnidDePedido.add(VALOR_SUCO);
-                    taxaEntrega(2f);
+                    taxaEntrega(1f);
                     break;
                 case "Vinho":
                     cestaDePedido.add(Double.valueOf(VALOR_VINHO * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
                     valorUnidDePedido.add(VALOR_VINHO);
-                    taxaEntrega(2f);
+                    taxaEntrega(1f);
                     break;
                 default:
                     System.out.println("Opção inválida");
 
             }
             System.out.println("");
-            System.out.print("Deseja lançar mais itens? s/n.");
+            System.out.print("Deseja lançar mais itens? S/N.");
             op = scanner.nextLine();
         } while (op.equals("s") || op.equals('S'));
 
