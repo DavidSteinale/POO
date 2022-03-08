@@ -133,7 +133,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             System.out.println("");
             System.out.print("Deseja lançar mais itens? S/N.");
             op = scanner.nextLine();
-        } while (op.equals("s") || op.equals('S'));
+        } while (op.equalsIgnoreCase("s"));
 
          
             // SOMA O PRECO FINAL DO PEDIDO
