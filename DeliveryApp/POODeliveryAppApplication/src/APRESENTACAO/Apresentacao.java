@@ -22,7 +22,7 @@ public class Apresentacao {
             System.out.println("+-------------------------------------------+");
             System.out.println("| 1 - Consultar Cardápio.                   |");
             System.out.println("| 2 - Realizar um pedido.                   |");
-            System.out.println("| 0 - Sair                                  |");
+            System.out.println("| 0 - Sair.                                 |");
             System.out.println("+-------------------------------------------+");
             System.out.println("");
 

@@ -21,9 +21,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
     private int qtdPrato;
     private int numeroPedido = random.nextInt(1000);
 
-    private CardapioEnum teste;
-
-    public void addPedido() {
+    public void addPedido() throws InterruptedException {
 
         do {
             try {
@@ -117,7 +115,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             valor += cestaDePedido.get(x);
 
         }
-
+                
         System.out.println();
         System.out.println("+-------------------------------------------+");
         System.out.println("               RESUMO DO PEDIDO              ");
@@ -132,6 +130,17 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
         System.out.printf("         Valor.............: %.2f \n", valor);
         System.out.printf("         Taxa de entrega...: %.2f \n", taxa);
         System.out.printf("         Valor total.......: %.2f \n", (valor + taxa));
+        System.out.println("+-------------------------------------------+");
+        
+        System.out.println();
+        System.out.println("AGUARDE PROCESSANDO PAGAMENTO...");
+        Thread.sleep(2000);
+        System.out.println("PAGAMENTO REALIZADO COM SUCESSO...");
+        Thread.sleep(2000);        
+        System.out.println("AGUARDE PROCESSANDO O PEDIDO....");
+        Thread.sleep(2000);
+        System.out.println();
+        
         System.out.println("+-------------------------------------------+");
         System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", numeroPedido);
         System.out.println("    Obrigado Pelo Pedido - Conte Conosco!");
