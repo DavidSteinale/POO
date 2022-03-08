@@ -24,14 +24,11 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
     public void addPedido() throws InterruptedException {
 
         do {
-            try {
-                System.out.println();
-                System.out.print("Informe o nome do prato:");
-                this.nomePrato = scanner.nextLine();
-                // this.nomePrato = scanner.nextLine().toUpperCase();
-            } catch (Exception e) {
-                System.out.println("prato invalidao" + e);
-            }
+
+            System.out.println();
+            System.out.print("Informe o nome do prato:");
+            this.nomePrato = scanner.nextLine();
+            // this.nomePrato = scanner.nextLine().toUpperCase();
 
             System.out.print("Informe que quantidade:");
             this.qtdPrato = scanner.nextInt();
@@ -115,7 +112,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             valor += cestaDePedido.get(x);
 
         }
-                
+
         System.out.println();
         System.out.println("+-------------------------------------------+");
         System.out.println("               RESUMO DO PEDIDO              ");
@@ -131,16 +128,16 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
         System.out.printf("         Taxa de entrega...: %.2f \n", taxa);
         System.out.printf("         Valor total.......: %.2f \n", (valor + taxa));
         System.out.println("+-------------------------------------------+");
-        
+
         System.out.println();
         System.out.println("AGUARDE PROCESSANDO PAGAMENTO...");
         Thread.sleep(2000);
         System.out.println("PAGAMENTO REALIZADO COM SUCESSO...");
-        Thread.sleep(2000);        
+        Thread.sleep(2000);
         System.out.println("AGUARDE PROCESSANDO O PEDIDO....");
         Thread.sleep(2000);
         System.out.println();
-        
+
         System.out.println("+-------------------------------------------+");
         System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", numeroPedido);
         System.out.println("    Obrigado Pelo Pedido - Conte Conosco!");
