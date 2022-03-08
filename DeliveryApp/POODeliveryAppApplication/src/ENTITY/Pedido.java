@@ -30,12 +30,11 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             this.nomePrato = scanner.nextLine();
             // this.nomePrato = scanner.nextLine().toUpperCase();
 
-            System.out.print("Informe que quantidade:");
-            this.qtdPrato = scanner.nextInt();
-            scanner.nextLine();
-
             switch (this.nomePrato) {
                 case "Burguer":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_BURGUER * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -43,6 +42,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(1f);
                     break;
                 case "Pizza":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_PIZZA * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -50,6 +52,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(1f);
                     break;
                 case "Fogazza":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_FOGAZZA * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -57,6 +62,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(1f);
                     break;
                 case "Pasta":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_PASTA * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -64,6 +72,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(2f);
                     break;
                 case "Lasanha":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_LASANHA * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -71,6 +82,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(2f);
                     break;
                 case "Polpetone":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_POLPETONE * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -78,6 +92,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(2f);
                     break;
                 case "Refrigerante":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_REFRIGERANTE * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -85,6 +102,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(1f);
                     break;
                 case "Suco":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_SUCO * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -92,6 +112,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(1f);
                     break;
                 case "Vinho":
+                    System.out.print("Informe que quantidade:");
+                    this.qtdPrato = scanner.nextInt();
+                    scanner.nextLine();
                     cestaDePedido.add(Double.valueOf(VALOR_VINHO * this.qtdPrato));
                     resumoPedido.add(this.nomePrato);
                     qtdItem.add(this.qtdPrato);
@@ -99,7 +122,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     taxaEntrega(1f);
                     break;
                 default:
-                    System.out.println("Opção inválida");
+                    System.out.println("Nome do prato inexistente!!!");
 
             }
             System.out.println("");
