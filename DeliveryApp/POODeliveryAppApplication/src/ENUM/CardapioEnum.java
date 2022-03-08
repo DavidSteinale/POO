@@ -14,6 +14,8 @@ public enum CardapioEnum {
     REFRIGERANTE("Refrigerante"),
     SUCO("Suco"),
     VINHO("Vinho");
+    
+    final double VALOR_BURGUER = 30f;
 
     private String descricao;
 
