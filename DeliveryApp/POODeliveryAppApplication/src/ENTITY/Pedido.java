@@ -26,105 +26,105 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
     private int numeroPedido = random.nextInt(1000);
     private boolean status = false;
 
-    public void addPedido() throws InterruptedException {
+    public void addPedido() throws InterruptedException{
 
         do {
 
             System.out.println();
             System.out.print("Informe o nome do prato:");
-            this.nomePrato = scanner.nextLine();
+            this.setNomePrato(scanner.nextLine());
             // this.nomePrato = scanner.nextLine().toUpperCase();
 
             switch (this.nomePrato) {
                 case "Burguer":
 
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_BURGUER * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_BURGUER * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_BURGUER);
-                    status = true;
+                    this.setStatus(true);
                     taxaEntrega(1f);
                     break;
                 case "Pizza":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_PIZZA * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_PIZZA * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_PIZZA);
                     taxaEntrega(1f);
                     break;
                 case "Fogazza":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_FOGAZZA * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_FOGAZZA * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_FOGAZZA);
                     taxaEntrega(1f);
                     break;
                 case "Pasta":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_PASTA * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_PASTA * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_PASTA);
                     taxaEntrega(2f);
                     break;
                 case "Lasanha":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_LASANHA * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_LASANHA * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_LASANHA);
                     taxaEntrega(2f);
                     break;
                 case "Polpetone":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_POLPETONE * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_POLPETONE * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_POLPETONE);
                     taxaEntrega(2f);
                     break;
                 case "Refrigerante":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_REFRIGERANTE * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_REFRIGERANTE * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_REFRIGERANTE);
                     taxaEntrega(1f);
                     break;
                 case "Suco":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_SUCO * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_SUCO * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_SUCO);
                     taxaEntrega(1f);
                     break;
                 case "Vinho":
                     System.out.print("Informe que quantidade:");
-                    this.qtdPrato = scanner.nextInt();
+                    this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
-                    cestaDePedido.add(Double.valueOf(VALOR_VINHO * this.qtdPrato));
-                    resumoPedido.add(util.preencheCom(this.nomePrato, " ", 15, 1));
-                    qtdItem.add(this.qtdPrato);
+                    cestaDePedido.add(Double.valueOf(VALOR_VINHO * this.getQtdPrato()));
+                    resumoPedido.add(util.preencheComEspaco(this.getNomePrato(), " ", 15, 1));
+                    qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_VINHO);
                     taxaEntrega(1f);
                     break;
@@ -134,12 +134,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             }
             System.out.println("");
             System.out.print("Deseja lançar mais itens? S/N.");
-            op = scanner.nextLine();
-        } while (op.equalsIgnoreCase("s"));
+            this.setOp(scanner.nextLine());
+        } while (this.getOp().equalsIgnoreCase("s"));
 
         // SOMA O PRECO FINAL DO PEDIDO
         for (int x = 0; x < cestaDePedido.size(); x++) {
             valor += cestaDePedido.get(x);
+            this.setTaxa(taxa);
 
         }
 
@@ -154,9 +155,9 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
         }
 
         System.out.println();
-        System.out.printf("         Valor.............: %.2f \n", valor);
-        System.out.printf("         Taxa de entrega...: %.2f \n", taxa);
-        System.out.printf("         Valor total.......: %.2f \n", (valor + taxa));
+        System.out.printf("         Valor.............: %.2f \n", this.getValor());
+        System.out.printf("         Taxa de entrega...: %.2f \n", this.getTaxa());
+        System.out.printf("         Valor total.......: %.2f \n", (this.getValor() + this.getTaxa()));
         System.out.println("+-------------------------------------------+");
 
         System.out.println();
@@ -169,7 +170,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
         System.out.println();
 
         System.out.println("+-------------------------------------------+");
-        System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", numeroPedido);
+        System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", this.getNumeroPedido());
         System.out.println("    Obrigado Pelo Pedido - Conte Conosco!");
         System.out.println();
         System.out.println("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
@@ -182,8 +183,8 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             valorUnidDePedido.remove(x);
         }
 
-        valor = 0;
-        taxa = 0;
+        this.setValor(0);
+        this.setTaxa(0);
         /* } else {
             System.out.println("Até mais");
         }*/
@@ -193,6 +194,78 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
     public void taxaEntrega(double tipoRefeição) {
         taxa += tipoRefeição;
 
+    }
+
+    public Util getUtil() {
+        return util;
+    }
+
+    public void setUtil(Util util) {
+        this.util = util;
+    }
+
+    public String getOp() {
+        return op;
+    }
+
+    public void setOp(String op) {
+        this.op = op;
+    }
+
+    public String getNomePrato() {
+        return nomePrato;
+    }
+
+    public void setNomePrato(String nomePrato) {
+        this.nomePrato = nomePrato;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public double getTaxa() {
+        return taxa;
+    }
+
+    public void setTaxa(double taxa) {
+        this.taxa = taxa;
+    }
+
+    public int getQtdPrato() {
+        return qtdPrato;
+    }
+
+    public void setQtdPrato(int qtdPrato) {
+        this.qtdPrato = qtdPrato;
+    }
+
+    public int getNumeroPedido() {
+        return numeroPedido;
+    }
+
+    public void setNumeroPedido(int numeroPedido) {
+        this.numeroPedido = numeroPedido;
+    }
+
+    public String[] getCardapio() {
+        return cardapio;
+    }
+
+    public void setCardapio(String[] cardapio) {
+        this.cardapio = cardapio;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
 }

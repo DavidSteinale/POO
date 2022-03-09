@@ -6,12 +6,13 @@ import java.util.Scanner;
 
 public class Apresentacao {
 
-    public void bemVindo() throws InterruptedException {
+    public void bemVindo(){
 
         Cardapio cardapio = new Cardapio();
         Pedido pedido = new Pedido();
 
         Scanner scanner = new Scanner(System.in);
+
         int menu = -1;
 
         do {
@@ -34,10 +35,9 @@ public class Apresentacao {
                 case 2:
                     pedido.addPedido();
                     break;
-
             }
 
-        }while (menu != 0);
+        } while (menu != 0);
 
     }
 }
