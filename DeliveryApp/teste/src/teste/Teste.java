@@ -16,11 +16,10 @@ public class Teste {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<Double> x = new ArrayList<Double>();
         
-        x.add(Double.valueOf(10));
-        
-        System.out.println("array list " + x.toString());
+       Utils util = new Utils();
+
+        System.out.println(util.preencheCom("532899935" , "5" , 14 , 2));
         
         
     }
