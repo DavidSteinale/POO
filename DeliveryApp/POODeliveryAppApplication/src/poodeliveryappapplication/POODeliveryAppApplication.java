@@ -12,7 +12,7 @@ import APRESENTACAO.Apresentacao;
  */
 public class POODeliveryAppApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Apresentacao apresentacao = new Apresentacao();
         
         apresentacao.bemVindo();

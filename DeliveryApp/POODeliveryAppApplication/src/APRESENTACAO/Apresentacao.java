@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Apresentacao {
 
-    public void bemVindo(){
+    public void bemVindo() throws InterruptedException{
 
         Cardapio cardapio = new Cardapio();
         Pedido pedido = new Pedido();

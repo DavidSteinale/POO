@@ -1,6 +1,7 @@
 package ENTITY;
 
 
+
 public class Util {
 
     public static String preencheComEspaco(String linha_a_preencher, String letra, int tamanho, int direcao) {
