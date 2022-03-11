@@ -23,8 +23,6 @@ public class Ex02 {
             System.out.print("Informe o CPF: ");
             cpf = scanner.next();
             scanner.nextLine();
-            
-            
 
             try { // TRATA O ERRO AO DIGITAR UMA LETRA NO CAMPO ONDE ESPERA UM NUMERO
 
@@ -41,7 +39,7 @@ public class Ex02 {
 
             if (!validaCaracter(nome)) { // TRATA SE FOI DIGITADO NUMERO EM VEZ DE LETRA
                 System.out.println("Você não pode inserir números no nome.");
-                nome=null;
+                nome = null;
             }
             System.out.println();
             System.out.println("CADASTRO REALIZADO COM SUCESSO.");
