@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
 public class Ex03 {
 
     public static void main(String[] args) throws ValidaSenha {
-        //Scanner scanner = new Scanner(System.in);
 
         String cadastroSenha = JOptionPane.showInputDialog("Cadastre uma senha:");
         int valorA = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
@@ -17,15 +16,12 @@ public class Ex03 {
         if (senha.equals(cadastroSenha)) {
             try {
                 float divisao = (valorA / valorB);
-                JOptionPane.showMessageDialog(null, "Resultado: " + divisao);                
+                JOptionPane.showMessageDialog(null, "Resultado: " + divisao);
             } catch (ArithmeticException e) {
                 JOptionPane.showMessageDialog(null, "Não é possivel dividir por 'ZERO'.");
             }
-            
         } else {
             throw new ValidaSenha("Senha inválida");
         }
-
     }
-
 }

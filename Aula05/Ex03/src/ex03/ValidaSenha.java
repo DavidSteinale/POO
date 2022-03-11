@@ -8,8 +8,5 @@ public class ValidaSenha extends Exception {
         super(senha);
         final int SENHA_INVALIDA = 1;
         JOptionPane.showMessageDialog(null, senha);
-       // JOptionPane.showMessageDialog(null, SENHA_INVALIDA);
-
     }
-
 }

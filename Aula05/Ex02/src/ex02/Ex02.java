@@ -19,21 +19,29 @@ public class Ex02 {
 
             System.out.print("Informe o nome: ");
             nome = scanner.next();
+            scanner.nextLine();
             System.out.print("Informe o CPF: ");
             cpf = scanner.next();
+            scanner.nextLine();
+            
+            
 
             try { // TRATA O ERRO AO DIGITAR UMA LETRA NO CAMPO ONDE ESPERA UM NUMERO
 
                 System.out.print("Informe a renda mensal: ");
                 rendaMensal = BigDecimal.valueOf(scanner.nextDouble());
+                scanner.nextLine();
 
             } catch (InputMismatchException erro) {
                 System.out.println("Renda mensal não pode receber texto | " + erro);
+                rendaMensal = BigDecimal.valueOf(0);
                 contador++;
+                scanner.nextLine();
             }
 
             if (!validaCaracter(nome)) { // TRATA SE FOI DIGITADO NUMERO EM VEZ DE LETRA
                 System.out.println("Você não pode inserir números no nome.");
+                nome=null;
             }
             System.out.println();
             System.out.println("CADASTRO REALIZADO COM SUCESSO.");
