@@ -40,26 +40,26 @@ public class ContaBancaria {
                 this.setSaldo(this.getSaldo() - valor);
             } else {
                 this.setSaldo(this.getSaldo() - valor);
-                System.out.println("GET saldo" + this.getSaldo());
                 this.setLimite(this.getLimite() - (Math.abs(this.getSaldo())));
                 System.out.println("Você entrou no Cheque especial");
-                System.out.println("SALDO TOTAL" + this.getSaldoComLimite());
-
             }
         } else {
             throw new ContaException("Saque não permitido. Valor do SAQUE maior que R$ 500,00 ou Saldo total ZERADO");
         }
 
     }
-
     public void depositar(double valor) throws ContaException {
-        this.setSaldo(this.saldo + valor);
-        System.out.println();
-        System.out.println("Depositado com sucesso.");
-        System.out.printf("Saldo Conta Corrente: %.2f \n", this.getSaldo());
-        System.out.printf("Limite Cheque especial: %.2f \n", this.getLimite());
-        System.out.printf("Saldo atual(Saldo + Limite): %.2f \n", this.getSaldoComLimite());
-        System.out.println();
+        if (valor < 1000) {
+            this.setSaldo(this.saldo + valor);
+            System.out.println();
+            System.out.println("Depositado com sucesso.");
+            System.out.printf("Saldo Conta Corrente: %.2f \n", this.getSaldo());
+            System.out.printf("Limite Cheque especial: %.2f \n", this.getLimite());
+            System.out.printf("Saldo atual(Saldo + Limite): %.2f \n", this.getSaldoComLimite());
+            System.out.println();
+        }else{
+            throw new ContaException("Deposito não permitido para valor acima de R$ 1.000,00.");
+        }
     }
 
     @Override
