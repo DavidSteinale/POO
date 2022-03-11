@@ -33,27 +33,38 @@ public class ContaBancaria {
         return saldo;
     }
 
-    public boolean sacar(double valor) throws ContaException {
-        if (this.getSaldoComLimite() >= valor) {
-            this.setSaldo( this.getSaldo() - valor);           
+    public void sacar(double valor) throws ContaException {
 
+        if ((valor < 500) || (this.getSaldoComLimite() < 0)) {
+            if (this.getSaldo() >= valor) {
+                this.setSaldo(this.getSaldo() - valor);
+            } else {
+                this.setSaldo(this.getSaldo() - valor);
+                System.out.println("GET saldo" + this.getSaldo());
+                this.setLimite(this.getLimite() - (Math.abs(this.getSaldo())));
+                System.out.println("Você entrou no Cheque especial");
+                System.out.println("SALDO TOTAL" + this.getSaldoComLimite());
+
+            }
         } else {
-            throw new ContaException("Saldo insuficiente na conta.");
+            throw new ContaException("Saque não permitido. Valor do SAQUE maior que R$ 500,00 ou Saldo total ZERADO");
         }
-        return true;
+
     }
 
     public void depositar(double valor) throws ContaException {
         this.setSaldo(this.saldo + valor);
         System.out.println();
         System.out.println("Depositado com sucesso.");
-        System.out.println("Saldo atual(Saldo + Limite): " + this.getSaldoComLimite());
+        System.out.printf("Saldo Conta Corrente: %.2f \n", this.getSaldo());
+        System.out.printf("Limite Cheque especial: %.2f \n", this.getLimite());
+        System.out.printf("Saldo atual(Saldo + Limite): %.2f \n", this.getSaldoComLimite());
         System.out.println();
     }
 
     @Override
     public String toString() {
-        return "Conta Bancaria: {" + "saldo=" + saldo + ", limite=" + limite + '}';
+        return "Conta Bancaria: {" + "saldo CC = " + saldo + ", Cheque Especial=" + limite + '}';
     }
 
 }
