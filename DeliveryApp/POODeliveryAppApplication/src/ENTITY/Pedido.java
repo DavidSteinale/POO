@@ -26,7 +26,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
     private int numeroPedido = random.nextInt(1000);
     private boolean status = false;
 
-    public void addPedido() throws InterruptedException{
+    public void addPedido() throws InterruptedException {
 
         do {
 
@@ -37,7 +37,7 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
 
             switch (this.nomePrato) {
                 case "Burguer":
-
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -47,8 +47,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     valorUnidDePedido.add(VALOR_BURGUER);
                     this.setStatus(true);
                     taxaEntrega(1f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Pizza":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -57,8 +62,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_PIZZA);
                     taxaEntrega(1f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Fogazza":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -67,8 +77,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_FOGAZZA);
                     taxaEntrega(1f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Pasta":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -77,8 +92,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_PASTA);
                     taxaEntrega(2f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Lasanha":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -87,8 +107,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_LASANHA);
                     taxaEntrega(2f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Polpetone":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -97,8 +122,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_POLPETONE);
                     taxaEntrega(2f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Refrigerante":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -107,8 +137,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_REFRIGERANTE);
                     taxaEntrega(1f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Suco":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -117,8 +152,13 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_SUCO);
                     taxaEntrega(1f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 case "Vinho":
+                    try {
                     System.out.print("Informe que quantidade:");
                     this.setQtdPrato(scanner.nextInt());
                     scanner.nextLine();
@@ -127,13 +167,17 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
                     qtdItem.add(this.getQtdPrato());
                     valorUnidDePedido.add(VALOR_VINHO);
                     taxaEntrega(1f);
-                    break;
+                    status = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Quantidade não pode receber caracter.");
+                }
+                break;
                 default:
                     System.out.println("Nome do prato inexistente!!!");
 
             }
             System.out.println("");
-            System.out.print("Deseja lançar mais itens? S/N.");
+            System.out.print("Lançar novo item? S/N.");
             this.setOp(scanner.nextLine());
         } while (this.getOp().equalsIgnoreCase("s"));
 
@@ -143,58 +187,61 @@ public class Pedido extends Cardapio implements ITaxaEntrega {
             this.setTaxa(taxa);
 
         }
+        if (status) {
 
-        System.out.println();
-        System.out.println("+-------------------------------------------+");
-        System.out.println("               RESUMO DO PEDIDO              ");
-        System.out.println("+-------------------------------------------+");
-        System.out.println("  Item                    Qtd     Valor unid ");
-        System.out.println("+-------------------------------------------+");
-        for (int x = 0; x < resumoPedido.size(); x++) {
-            System.out.printf("  %s " + "         %d           %.2f \n", resumoPedido.get(x), qtdItem.get(x), valorUnidDePedido.get(x));
+            System.out.println();
+            System.out.println("+-------------------------------------------+");
+            System.out.println("               RESUMO DO PEDIDO              ");
+            System.out.println("+-------------------------------------------+");
+            System.out.println("  Item                    Qtd     Valor unid ");
+            System.out.println("+-------------------------------------------+");
+            for (int x = 0; x < resumoPedido.size(); x++) {
+                System.out.printf("  %s " + "         %d           %.2f \n", resumoPedido.get(x), qtdItem.get(x), valorUnidDePedido.get(x));
+            }
+
+            System.out.println();
+            System.out.printf("         Valor.............: %.2f \n", this.getValor());
+            System.out.printf("         Taxa de entrega...: %.2f \n", this.getTaxa());
+            System.out.printf("         Valor total.......: %.2f \n", (this.getValor() + this.getTaxa()));
+            System.out.println("+-------------------------------------------+");
+
+            System.out.println();
+            System.out.println("AGUARDE PROCESSANDO PAGAMENTO...");
+            Thread.sleep(2000);
+            System.out.println("PAGAMENTO REALIZADO COM SUCESSO...");
+            Thread.sleep(2000);
+            System.out.println("AGUARDE PROCESSANDO O PEDIDO....");
+            Thread.sleep(2000);
+            System.out.println();
+
+            System.out.println("+-------------------------------------------+");
+            System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", this.getNumeroPedido());
+            System.out.println("    Obrigado Pelo Pedido - Conte Conosco!");
+            System.out.println();
+            System.out.println("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+            System.out.println();
+
+            for (int x = 0; x < cestaDePedido.size(); x++) {
+                cestaDePedido.remove(x);
+                resumoPedido.remove(x);
+                qtdItem.remove(x);
+                valorUnidDePedido.remove(x);
+            }
+
+            this.setValor(0);
+            this.setTaxa(0);
+        } else{
+            System.out.println("Até logo!!!");
         }
-
-        System.out.println();
-        System.out.printf("         Valor.............: %.2f \n", this.getValor());
-        System.out.printf("         Taxa de entrega...: %.2f \n", this.getTaxa());
-        System.out.printf("         Valor total.......: %.2f \n", (this.getValor() + this.getTaxa()));
-        System.out.println("+-------------------------------------------+");
-
-        System.out.println();
-        System.out.println("AGUARDE PROCESSANDO PAGAMENTO...");
-        Thread.sleep(2000);
-        System.out.println("PAGAMENTO REALIZADO COM SUCESSO...");
-        Thread.sleep(2000);
-        System.out.println("AGUARDE PROCESSANDO O PEDIDO....");
-        Thread.sleep(2000);
-        System.out.println();
-
-        System.out.println("+-------------------------------------------+");
-        System.out.printf("             NÚMERO DO PEDIDO: %s \n \n", this.getNumeroPedido());
-        System.out.println("    Obrigado Pelo Pedido - Conte Conosco!");
-        System.out.println();
-        System.out.println("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
-        System.out.println();
-
-        for (int x = 0; x < cestaDePedido.size(); x++) {
-            cestaDePedido.remove(x);
-            resumoPedido.remove(x);
-            qtdItem.remove(x);
-            valorUnidDePedido.remove(x);
-        }
-
-        this.setValor(0);
-        this.setTaxa(0);
-        /* } else {
-            System.out.println("Até mais");
-        }*/
+    
     }
+        @Override
+        public void taxaEntrega(double tipoRefeição ) {
+             taxa += tipoRefeição;
+   
+       }
 
-    @Override
-    public void taxaEntrega(double tipoRefeição) {
-        taxa += tipoRefeição;
-
-    }
+    
 
     public Util getUtil() {
         return util;
